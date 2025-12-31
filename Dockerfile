@@ -13,5 +13,4 @@ RUN apt-get update && apt-get install -y \
 RUN curl -fsSL https://get.mcsmanager.com/install.sh | bash
 
 EXPOSE 23333 24444
-
-CMD ["bash", "/opt/mcsmanager/web/start.sh"]
+CMD ["mcsmanager", "start", "--no-daemon"]
