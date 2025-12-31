@@ -1,17 +1,9 @@
 app = "panel-mcs"
+
 primary_region = "gru"
 
-[build]
-  dockerfile = "Dockerfile"
-
-[[services]]
+[http_service]
   internal_port = 23333
-  protocol = "tcp"
-
-  [[services.ports]]
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
