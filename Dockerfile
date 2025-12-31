@@ -10,4 +10,4 @@ RUN npm install
 
 EXPOSE 23333
 
-CMD ["npm", "run", "production"]
+CMD ["npm", "run", "start"]
