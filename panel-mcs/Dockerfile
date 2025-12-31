@@ -10,9 +10,8 @@ RUN apt-get update && apt-get install -y \
     bash \
     && rm -rf /var/lib/apt/lists/*
 
-# Instalar MCSManager oficial
 RUN curl -fsSL https://get.mcsmanager.com/install.sh | bash
 
 EXPOSE 23333 24444
 
-CMD ["bash", "start.sh"]
+CMD ["bash", "/opt/mcsmanager/web/start.sh"]
